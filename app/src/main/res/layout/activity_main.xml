@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="12sp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="result"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_margin="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_tv"
+        android:id="@+id/num1_ed"
+        android:layout_width="205dp"
+        android:maxLength="10"
+        android:layout_height="wrap_content"
+        android:hint="num1"
+        android:textSize="20sp"/>
+
+    <EditText
+        app:layout_constraintStart_toEndOf="@id/num1_ed"
+        android:id="@+id/num2_ed"
+        android:maxLength="10"
+        app:layout_constraintTop_toTopOf="@id/num1_ed"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:hint="num2"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginStart="10dp"
+        android:id="@+id/ok_btn_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/num1_ed"
+        app:layout_constraintStart_toEndOf="@id/ok_btn_minus"
+        android:text="+"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/num1_ed"
+        android:id="@+id/ok_btn_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="-"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/num2_ed"
+        app:layout_constraintStart_toStartOf="@id/num2_ed"
+        android:id="@+id/ok_btn_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="*"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/num2_ed"
+        app:layout_constraintStart_toEndOf="@id/ok_btn_multi"
+        android:layout_marginStart="10dp"
+        android:id="@+id/ok_btn_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="/"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
